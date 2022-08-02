@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %} Add Tour {% endblock %}
+
+{% block content %} 
+<form action="#" method="post" enctype="multipart/form-data">
+    <p>Race:</p>
+    <p><input type="text" name="stage" required="required"/></p>
+    <p>Year / Variant:</p>
+    <p><input type="text" name="year" required="required"/></p>
+    <p>Amount of stages:</p>
+    <p><input type="text" name="number" required="required"/></p>
+    <p>Overview Image (URL):</p>
+    <p><input type="text" name="profile"></p>
+    <p>Download Link:</p>
+    <p><input type="text" name="link" required="required"></p>
+    <p><input type="submit" value="submit"/></p>
+</form>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %} Search Stage {% endblock %}
+
+{% block content %} 
+<form action="#" method="post" enctype="multipart/form-data">
+    <p>Race name:</p>
+    <p><input type="text" name="stage"/></p>
+    <p>Creator:</p>
+    <p><input type="text" name="creator"/></p>
+    <p><input type="submit" value="submit"/></p>
+</form>
+
+
+    {% if results != 0 %}
+        {%for item in results %}
+            {% if item.number != 0 %}
+                <a href='/showstage/{{item.id}}'>{{item.race}} {{item.year}} stage {{item.number}} by {{item.creator}}</a>
+            {% else %}
+                <a href='/showstage/{{item.id}}'>{{item.race}} {{item.year}} by {{item.creator}}</a>
+            {% endif %}
+            <p><img src={{item.profile}} alt="profile" width="750">
+            </p>
+        {% endfor %}
+    {% endif %}
+{% endblock %}

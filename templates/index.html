@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %} Home {% endblock %}
+
+{% block content %} 
+    <h1>Latest Stages</h1>
+    
+    {%for item in values[::-1] %}
+        {% if item.number != 0 %}
+            <a href='/showstage/{{item.id}}'>{{item.race}} {{item.year}} stage {{item.number}} by {{item.creator}}</a>
+        {% else %}
+            <a href='/showstage/{{item.id}}'>{{item.race}} {{item.year}} by {{item.creator}}</a>
+        {% endif %}
+        <p><img src={{item.profile}} alt="profile" width="750">
+        </p>
+    {% endfor %}
+
+{% endblock %}

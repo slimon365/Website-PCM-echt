@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %} Show Tour {% endblock %}
+
+{% block content %}
+    <h1> {{race}} {{year}} </h1>
+    <h2>Created by {{creators}}</h2>
+    <a href = {{link}}>Download</a>
+
+
+    {% if overview != '0' %}
+        <p><img src={{overview}} alt="overview" width="750">
+        </p>
+    {% endif %}
+
+    <h3>Stages:</h3>
+
+    {%for item in liststages %}
+        {% if item[1] != '0' %}
+            <a href='/showstage/{{item[1]}}'>Stage {{item[0]}}</a>
+        {% else %}
+            <p>Stage {{item[0]}}</p>
+        {% endif %}
+        {% if item[2] != '0' %}
+        <p><img src={{item[2]}} alt="profile" width="500">
+        </p>
+        {% endif %}
+    {% endfor %}
+
+{% endblock %}

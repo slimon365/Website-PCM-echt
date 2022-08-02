@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %} Show Stage {% endblock %}
+
+{% block content %}
+{% if number != 0 %}
+    <h1> {{race}} {{year}} Stage {{number}} </h1>
+{% else %}
+    <h1> {{race}} {{year}} </h1>
+{% endif %}
+
+<h2> by {{creator}} </h2>
+
+<p>Route:
+    {{start}} - {{finish}}
+</p>
+
+<p><img src={{profile}} alt="profile">
+</p>
+
+{% if link != '0' %}
+    <a href = {{link}}>Download</a>
+{% endif %}
+
+
+{% endblock %}

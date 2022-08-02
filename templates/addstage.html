@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %} Add Stage {% endblock %}
+
+{% block content %} 
+<form action="#" method="post" enctype="multipart/form-data">
+    <p>Race:</p>
+    <p><input type="text" name="stage" required="required"/></p>
+    <p>Year / Variant:</p>
+    <p><input type="text" name="year" required="required"/></p>
+    <p>Stage Number:</p>
+    <p><input type="text" name="number"/></p>
+    <p>Creator:</p>
+    <p><input type="text" name="creator" required="required"/></p>
+    <p>Starting Location:</p>
+    <p><input type="text" name="start" required="required"/></p>
+    <p>Finish location:</p>
+    <p><input type="text" name="finish" required="required"/></p>
+    <p>Profile Image (URL):</p>
+    <p><input type="text" name="profile" required="required"></p>
+    <p>Download Link:</p>
+    <p><input type="text" name="link"></p>
+    <p><input type="submit" value="submit"/></p>
+</form>
+{% endblock %}

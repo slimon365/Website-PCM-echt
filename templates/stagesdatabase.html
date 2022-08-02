@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block title %} Database {% endblock %}
+
+{% block content %}
+    {% for item in values %}
+        <p>ID: {{item.id}}, Race: {{item.race}}, Year: {{item.year}}, Stage: {{item.number}}, Creator: {{item.creator}}, Start: {{item.start}}, Finish: {{item.finish}}, Profilelink: {{item.profile}} Download: {{item.link}}</p>
+    {% endfor %}
+{% endblock %}
